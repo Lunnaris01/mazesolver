@@ -27,7 +27,7 @@ class Maze():
 
     def animate(self):
         self.win.redraw()
-        time.sleep(0.15)
+        time.sleep(0.02)
 
     def _break_entrance_and_exit(self,entrance,exit,entrancewall,exitwall):
         x,y = entrance
@@ -99,5 +99,6 @@ class Maze():
                     return True
                 else:
                     current_cell.draw_move(self.win.canvas,self.cells[nextnode[0]][nextnode[1]],"gray")
+                    self.animate()
 
 
